@@ -1,0 +1,30 @@
+---
+import SearchIcon from "@/Icons/Search.astro"
+
+import type { DataAside } from "@/datos/data";
+
+interface Props{
+    data: DataAside;
+}
+
+const {data} = Astro.props
+const {
+    id, 
+    title,
+} = data
+
+---
+
+<a href={`/data/${id}`} class="data-item flex relative p-2 overflow-hidden items-center gap-5 rounded-md hover:bg-zinc-800">
+<div class="flex flex-auto flex-col truncate pl-3">
+    <h4 class="text-slate-300 text-base ">
+        {title}
+    </h4>
+</div>
+</a>
+
+<!-- <picture class="h-12 w-12 flex-none ">
+    <img src={link}
+    alt={`Image of ${title} by ${title}`}
+    class="object-cover w-full h-full rounded-md">
+</picture> -->

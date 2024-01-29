@@ -1,0 +1,33 @@
+---
+import type { DataAside } from "@/datos/data";
+
+interface Props{
+    data: DataAside;
+    }
+
+    const {data} = Astro.props
+const {
+    id, 
+    title,
+    link,
+} = data
+---
+
+<a  href={`/data/${id}`} 
+    class="data-item transition-all duration-300 flex relative p-2 overflow-hidden  gap-2 pb-6 rounded-md hover:bg-zinc-800 shadow-lg bg-zinc-500/30 w-44 flex-col"
+    transition:name=`data ${id} box`>
+
+    <picture class="aspect-square w-full h-auto flex-none">
+        <img 
+        src={link} 
+        alt={title}
+        class="object-cover w-full h-full rounded-md"
+        transition:name=`component ${id} image`
+        >
+    </picture>
+    <div class="flex flex-auto flex-col truncate ">
+        <h4 class="text-white text-sm px-2 ">
+            {title}
+        </h4>
+    </div>
+</a>

@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+import {allData, songs} from "../../datos/data"
+
+
+import Icono from "../../components/Icono";
+
+const { id } = Astro.params;
+
+const data  = allData.find((data) => data.id === id);
+const playlistSongs = songs.filter((song) => song.albumId === data?.albumId)
+---
+
+<Layout title="Welcome to Astro.">
+	<Icono/>
+	<div 
+	id="components-container"
+	class="relative transition-all duration-1000 bg-green-500"
+	transition:name=`data ${id} box`>
+	contenido
+
+	<!-- <PageHeader/> -->
+	
+	<div class="relative z-10 px-6 pt-10">
+
+	
+		</div>
+		<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80">
+
+		</div>
+	</div>
+	
+	</div>
+
+</Layout>
+

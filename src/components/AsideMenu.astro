@@ -1,0 +1,106 @@
+---
+import LibraryIcon from "@/Icons/Library.astro"
+import HomeIcon from "@/Icons/Home.astro"
+import SearchIcon from "@/Icons/Search.astro"
+import BlogIcon from "@/Icons/BlogIcon.astro"
+import ContentIcon from "@/Icons/ContentIcon.astro"
+
+
+
+---
+<!-- 
+En este apartado se puede realizar un componente que englobe estos dos componentes, para que se pueda reutilizar en otras partes del proyecto. -->
+<nav class="flex flex-col flex-1 gap-2">
+    <div class="bg-zinc-900 rounded-lg p-2">
+        <ul>
+            <a 
+            class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800"
+            href="#">
+                <HomeIcon/>
+                Inicio
+                <slot/>
+            </a> 
+            <a 
+            class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800"
+            href="#">
+                <SearchIcon/>
+                Buscar
+                <slot/>
+            </a> 
+        </ul>
+    </div>
+
+    
+
+    <div class="bg-zinc-900 rounded-lg p-2 flex-1">
+        <ul>
+           <div 
+            class="flex gap-4 justify-center text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800  "
+            >
+                <LibraryIcon/>
+                 biblioteca
+                <slot/>
+            </div> 
+            <a 
+            class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800"
+            href="/blog">
+                <BlogIcon/>
+                Blog
+                <slot/>
+            </a> 
+            <a 
+            class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800"
+            href="/cabecera">
+                <ContentIcon/>
+                Cabecera
+                <slot/>
+            </a> 
+            <a 
+            class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800"
+            href="/footer">
+                <ContentIcon/>
+                Pie de página
+                <slot/>
+            </a> 
+            <a 
+            class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800"
+            href="/contenido">
+                <ContentIcon/>
+                Contenido
+                <slot/>
+            </a> 
+            <a 
+            class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800"
+            href="/contacto">
+                <ContentIcon/>
+                Contacto
+                <slot/>
+            </a> 
+            <a 
+            class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800"
+            href="/galeria">
+                <ContentIcon/>
+                Galería
+                <slot/>
+            </a> 
+            <a 
+            class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800"
+            href="#">
+                <ContentIcon/>
+                Equipo
+                <slot/>
+            </a> 
+            <a 
+            class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium transition-duration-300 rounded-md hover:bg-zinc-800"
+            href="/testimonio">
+                <ContentIcon/>
+                Testimonio
+                <slot/>
+            </a> 
+      
+           
+        </ul>
+        
+
+    </div>
+</nav>
