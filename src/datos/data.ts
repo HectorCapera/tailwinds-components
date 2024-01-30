@@ -13,32 +13,37 @@ export const data: DataAside[] = [
   {
     id: "1",
     title: "Header",
-    link: "/h8.png",
+    link: "/Cabecera.png",
   },
   {
     id: "2",
     title: "Footer",
-    link: "/h1.png",
+    link: "/Pie de pagina.png",
   },
   {
     id: "3",
     title: "Content",
+    link: "/Contenido.png",
   },
   {
     id: "4",
     title: "Gallery",
+    link: "/Galeria.png",
   },
   {
     id: "5",
     title: "Testimonials",
+    link: "/Testimonio.png",
   },
   {
     id: "6",
     title: "Contact",
+    link: "/Contacto.png",
   },
   {
     id: "7",
     title: "Team",
+    link: "/Equipo.png",
   },
 ];
 
