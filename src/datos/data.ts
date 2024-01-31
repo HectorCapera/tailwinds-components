@@ -2,48 +2,61 @@ import { colors } from "./colors";
 
 export interface DataAside {
   id: string;
-  albumId: number;
   title: string;
   color: (typeof colors)[keyof typeof colors];
-  cover: string;
+  albumId: number;
   link?: string;
 }
 
 export const data: DataAside[] = [
   {
     id: "1",
-    title: "Header",
+    title: "Cabecera",
     link: "/Cabecera.png",
+    albumId: 1,
+    color: colors.yellow,
   },
   {
     id: "2",
-    title: "Footer",
+    title: "Píe de página",
     link: "/Pie de pagina.png",
+    albumId: 2,
+    color: colors.yellow,
   },
   {
     id: "3",
-    title: "Content",
+    title: "Contenido",
     link: "/Contenido.png",
+    albumId: 3,
+    color: colors.yellow,
   },
   {
     id: "4",
     title: "Gallery",
     link: "/Galeria.png",
+    albumId: 4,
+    color: colors.yellow,
   },
   {
     id: "5",
-    title: "Testimonials",
+    title: "Testimonios",
     link: "/Testimonio.png",
+    albumId: 5,
+    color: colors.yellow,
   },
   {
     id: "6",
-    title: "Contact",
+    title: "Contacto",
     link: "/Contacto.png",
+    albumId: 6,
+    color: colors.yellow,
   },
   {
     id: "7",
-    title: "Team",
+    title: "Equipo de trabajo",
     link: "/Equipo.png",
+    albumId: 7,
+    color: colors.yellow,
   },
 ];
 
@@ -97,24 +110,7 @@ export const songs: Song[] = [
     album: "Chill Lo-Fi Music",
     duration: "3:50",
   },
-  {
-    id: 4,
-    albumId: 1,
-    title: "Urban Echoes",
-    image: `https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353`,
-    artists: ["LoFi Dreamer"],
-    album: "Chill Lo-Fi Music",
-    duration: "3:30",
-  },
-  {
-    id: 5,
-    albumId: 1,
-    title: "Night's End",
-    image: `https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353`,
-    artists: ["LoFi Dreamer"],
-    album: "Chill Lo-Fi Music",
-    duration: "4:20",
-  },
+
   {
     id: 1,
     albumId: 2,

@@ -27,13 +27,11 @@ const idCard = `data-${id}`
         transition:name=`component ${id} image`
         >
     </picture>
-    <div class="flex flex-auto flex-col px-2 ">
-        <h4 class="text-white text-sm px-2 " transition:name=`data ${data.id} title`>
+    <div class="flex flex-auto flex-col  ">
+        <h4 class="text-white text-md font-bold  " transition:name=`data ${data.id} title`>
             {title}
         </h4>
-        <span class="text-xs text-gray-400" transition:name=`data ${data.id} id`>
-            {id}
-        </span>
+        
     </div>
 </a>
 </article>
