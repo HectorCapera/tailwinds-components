@@ -72,6 +72,30 @@ export const sideData = data.map((item) => ({
 
 export const allData = [...data, ...moreData, ...sideData];
 
+export interface Images {
+  id: number;
+  imageId: number;
+  image: string;
+}
+
+export const images: Images[] = [
+  {
+    id: 1,
+    imageId: 1,
+    image: "/Cabecera index.png",
+  },
+  {
+    id: 2,
+    imageId: 2,
+    image: "/Cabecera index.png",
+  },
+  {
+    id: 3,
+    imageId: 1,
+    image: "/Cabecera index.png",
+  },
+];
+
 export interface Song {
   id: number;
   albumId: number;

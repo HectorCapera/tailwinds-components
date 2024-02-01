@@ -2,24 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 import {data} from "@/datos/data"
 
+
+import Inicio from "@/components/Inicio.astro"
+import Explore from "@/components/Explore.astro"
+import Content from "@/components/Content"
 import DataCard from "@/components/DataCard.astro";
 import Icono from "@/components/Icono";
 ---
 
 <Layout title="Tailwind Components">
+		
 	<Icono/>
+	
+	<Content/>
+	<Inicio/>
+	<Explore/>
 	<div 
 	id="components-container"
-	class="relative transition-all duration-1000"
+	class="relative transition-all duration-1000 z-10 "
 	>
-
-	<!-- <PageHeader/> -->
-	
-	<div class="relative z-10 px-6 pt-10 ">
-
-		<!-- <Greetings/> -->
-	
-			<h2 class="font-bold text-3xl text-center">Conoce los diferentes componentes para tu web</h2>
+		<h2 class="font-bold text-3xl text-center">Conoce los diferentes componentes para tu web</h2>
 			<p class="mt-5 text-center">
 				Estos son algunos de los componentes que puedes utilizar para tu web. 
 				Conoce más sobre cada uno de ellos y que función cumplen.
@@ -29,13 +31,13 @@ import Icono from "@/components/Icono";
 				data.map(data => <DataCard data={data}/> )
 			}
 			</div>
-		</div>
-		<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80">
+	</div>
+		<div class=" inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80">
 
 		</div>
-	</div>
 	
-	</div>
+	
+	
 
 </Layout>
 

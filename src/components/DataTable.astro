@@ -1,61 +1,24 @@
 ---
 import { type Song} from "../datos/data"
+import { type Images} from "../datos/data"
 
 interface Props {
     songs: Song []
 }
 
 const { songs } = Astro.props
----
-<section class="">
-  <div class="text-center ">
-    <h2>Crear una interfaz perfecta nunca fue tan fácil</h2>
-  </div>
 
- 
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
-      <h2 class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">
-        {
-          songs.map((song, index) => (
-            <tr class="border-spacing-0 text-gray-300 text-sm font-light hover:bg-white/10 overflow-hidden transition duration-300">
-              <td class="px-4 py-2 rounded-tl-lg rounded-bl-lg w-5">{index + 1}</td>
-              <td class="px-4 py-2 flex gap-3">
-                <picture class="">
-                  <img src={song.image} alt={song.title} class="w-11 h-11" />
-                </picture>
-                <div class="flex flex-col">
-                  <h3 class="text-white text-base font-normal">{song.title}</h3>
-                  <span>{song.artists.join(", ")}</span>
-                </div>
-              </td>
-              <td class="px-4 py-2">{song.album}</td>
-              <td class="px-4 py-2 rounded-tr-lg rounded-br-lg">{song.duration}</td>
-            </tr>
-          ))
-        }
-      </h2>
-      <div class="md:w-3/5 md:pl-6">
-        <p class="leading-relaxed text-base">Taxidermy bushwick celiac master cleanse microdosing seitan. Fashion axe four dollar toast truffaut, direct trade kombucha brunch williamsburg keffiyeh gastropub tousled squid meh taiyaki drinking vinegar tacos.</p>
-        <div class="flex md:mt-4 mt-6">
-          <button class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
-          <a class="text-indigo-500 inline-flex items-center ml-4">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+
+---
+
   
-<!-- <table class="table-auto text-left min-w-full divide-y-2 divide-gray-500/50">
+<table class="table-auto text-left min-w-full divide-y-2 divide-gray-500/50">
   <thead class="">
       <tr class=" text-gray-300 text-sm- font-light">
-          <th class="px-4 py-2"> # </th>
-          <th class="px-4 py-2"> Título  </th>
-          <th class="px-4 py-2"> Álbum </th>
-          <th class="px-4 py-2"> Time  </th>
+          <th class="px-4 py-2"> N° </th>
+          <th class="px-4 py-2"> Categoría  </th>
+          <th class="px-4 py-2"> Código </th>
+          <th class="px-4 py-2">   </th>
          
       </tr>
   </thead>
@@ -82,4 +45,4 @@ const { songs } = Astro.props
       }
     </tbody>
 
-</table> -->
+</table>
