@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Toaster, toast } from "sonner";
 
-const MiComponente = () => {
+const Header = () => {
   const [activeButton, setActiveButton] = useState("diseño");
   const [codigo, setCodigo] = useState(""); // Variable para almacenar el código HTML
 
@@ -42,20 +43,18 @@ const MiComponente = () => {
 
   const handleCopyToClipboard = () => {
     // Crear un elemento textarea para copiar el código
-    const textarea = document.createElement("textarea");
-    textarea.value = codigo;
-
-    // Añadir el textarea al DOM
-    document.body.appendChild(textarea);
-
-    // Seleccionar y copiar el contenido del textarea
-    textarea.select();
-    document.execCommand("copy");
-
-    // Eliminar el textarea del DOM
-    document.body.removeChild(textarea);
-
-    alert("Código copiado al portapapeles");
+    navigator.clipboard
+      .writeText(codigo)
+      .then(() => {
+        toast.success("Código copiado al portapapeles", {
+          duration: 3000,
+          position: "top-right",
+        });
+      })
+      .catch((error) => {
+        toast.error("Error al copiar el código al portapapeles");
+        // console.error("Error al copiar el código al portapapeles:", error);
+      });
   };
 
   return (
@@ -69,7 +68,7 @@ const MiComponente = () => {
 
       {activeButton === "diseño" && (
         <div>
-          <header className="bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md">
+          <header className="bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md mt-10">
             <div className="container mx-auto py-4 flex items-center justify-between">
               <div>
                 <a href="#" className="text-2xl font-bold px-4">
@@ -106,8 +105,9 @@ const MiComponente = () => {
           </pre>
         </div>
       )}
+      <Toaster />
     </div>
   );
 };
 
-export default MiComponente;
+export default Header;

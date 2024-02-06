@@ -31,29 +31,40 @@ const { title } = Astro.props;
 		</main>
 	
 
-	<footer class="[grid-area:player]  min-h-[100px]">
-		Player
-	</footer>
+	
 		</div>
 		
 	</body>
 </html>
 <style is:global> 
-#app {
-	display: grid;
-	grid-template-areas: "aside main main"
-	"player player player";
-	grid-template-columns: 350px 1fr;
-	grid-template-rows: 1fr auto;
-}
-</style>
-<style is:global>
-	
-	html {
-		font-family: system-ui, sans-serif;
-		background: #000000;
-		color: white;
-		
+	#app {
+		display: grid;
+		grid-template-areas: 
+							 
+							 "main"
+							 "aside";
+							 
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto 10px;
+		background: black;
+		color: #c9c9c9;
+;
 	}
 	
+	@media (min-width: 640px) {
+		#app {
+			grid-template-areas: "aside main"
+								 "aside player";
+			grid-template-columns: 350px 1fr;
+			grid-template-rows: auto auto;
+		}
+	}
+	</style>
+<style is:global>
+    @media (min-width: 640px) {
+        main {
+            max-width: calc(100vw - 350px);
+			
+        }
+    }
 </style>
