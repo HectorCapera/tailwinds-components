@@ -1,0 +1,23 @@
+---
+import Footer1 from "@/components/templates/Footer1";
+import Footer2 from "@/components/templates/Footer2";
+import Footer3 from "@/components/templates/Footer3";
+
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Píe de página">
+    
+    <div class="p-10">
+        <div class="flex">
+            <a href="/"> Inicio </a> 
+            <p>&nbsp; / &nbsp;</p>
+            <p>Píe de página</p>
+            
+        </div>
+        </div>
+
+    <Footer1 client:load/>
+    <Footer2 client:load/>
+    <Footer3 client:load/>
+</Layout> 

@@ -11,32 +11,32 @@ const Header = () => {
     // Actualizar el código cuando haces clic en el botón "Código"
     if (button === "código") {
       setCodigo(`
-        <header class="bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md">
-          <div class="container mx-auto py-4 flex items-center justify-between">
+      <header className="bg-white shadow-md mt-10">
+            <div className="container mx-auto py-4 flex flex-col md:flex-row items-center justify-between text-zinc-700">
               <div>
-                <a href="#" class="text-2xl font-bold px-4">
+                <a href="#" className="text-2xl font-bold px-4">
                   Tu Logo
                 </a>
               </div>
-              <nav class="space-x-4">
-                <a href="#" class="nav-link">
+              <nav className="space-x-4 flex-grow">
+                <a href="#" className="nav-link">
                   Inicio
                 </a>
-                <a href="#" class="nav-link">
+                <a href="#" className="nav-link">
                   Acerca de
                 </a>
-                <a href="#" class="nav-link">
+                <a href="#" className="nav-link">
                   Servicios
                 </a>
-                <a href="#" class="nav-link">
+                <a href="#" className="nav-link">
                   Contacto
                 </a>
               </nav>
-              <button class="btn-login bg-white text-blue-500 px-4 py-2 rounded-full hover:bg-blue-100 transform transition-transform mr-4">
+              <button className="btn-login bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transform transition-transform md:ml-4">
                 Iniciar Sesión
               </button>
-          </div>
-        </header>
+            </div>
+          </header>
       `);
     }
   };
@@ -68,14 +68,14 @@ const Header = () => {
 
       {activeButton === "diseño" && (
         <div>
-          <header className="bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md mt-10">
-            <div className="container mx-auto py-4 flex items-center justify-between">
+          <header className="bg-white shadow-md mt-10">
+            <div className="container mx-auto py-4 flex flex-col md:flex-row items-center justify-between text-zinc-700">
               <div>
                 <a href="#" className="text-2xl font-bold px-4">
                   Tu Logo
                 </a>
               </div>
-              <nav className="space-x-4">
+              <nav className="space-x-4 flex-grow">
                 <a href="#" className="nav-link">
                   Inicio
                 </a>
@@ -89,11 +89,12 @@ const Header = () => {
                   Contacto
                 </a>
               </nav>
-              <button className="btn-login bg-white text-blue-500 px-4 py-2 rounded-full hover:bg-blue-100 transform transition-transform mr-4">
+              <button className="btn-login bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transform transition-transform md:ml-4">
                 Iniciar Sesión
               </button>
             </div>
           </header>
+          <div class="py-32 bg-gray-400"></div>
         </div>
       )}
 
