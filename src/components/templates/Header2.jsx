@@ -72,7 +72,7 @@ const Header2 = () => {
   return (
     <div className="p-10 bg-zinc-900/70 rounded-lg">
       <h2 className="text-3xl mt-4">Cabecera</h2>
-      <div className="flex gap-5">
+      <div className="flex gap-5 mb-10">
         <button onClick={() => handleButtonClick("diseño")}>Diseño</button>
         <button onClick={() => handleButtonClick("código")}>Código</button>
         <button onClick={handleCopyToClipboard}>Copiar código</button>

@@ -10,7 +10,7 @@ const Footer2 = () => {
 
     // Actualizar el código cuando haces clic en el botón "Código"
     if (button === "código") {
-      setFooter(`
+      setFooter2(`
       <footer class="bg-slate-200 text-zinc-700 py-8">
             <div class="container mx-auto px-4">
               <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -93,9 +93,9 @@ const Footer2 = () => {
   };
 
   return (
-    <div className="p-10 bg-zinc-800/70">
+    <div className="p-10 bg-zinc-900/70 rounded-lg">
       <h2 className="text-3xl mt-4">Píe de página</h2>
-      <div className="flex gap-5">
+      <div className="flex gap-5  mb-10">
         <button onClick={() => handleButtonClick("diseño")}>Diseño</button>
         <button onClick={() => handleButtonClick("código")}>Código</button>
         <button onClick={handleCopyToClipboard}>Copiar código</button>

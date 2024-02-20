@@ -58,7 +58,7 @@ const Header = () => {
   };
 
   return (
-    <div className="p-10 bg-zinc-800/70">
+    <div className="p-10 bg-zinc-800/70 rounded-lg">
       <h2 className="text-3xl mt-4">Cabecera</h2>
       <div className="flex gap-5">
         <button onClick={() => handleButtonClick("diseño")}>Diseño</button>

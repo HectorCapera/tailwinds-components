@@ -1,0 +1,23 @@
+---
+import Contact1 from "@/components/templates/Contact1";
+import Contact2 from "@/components/templates/Contact2";
+
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Contacto">
+
+    <div class="p-10">
+        <div class="flex">
+            <a href="/"> Inicio </a> 
+            <p>&nbsp; / &nbsp;</p>
+            <p>Contacto</p>
+            
+        </div>
+        </div>
+
+
+
+            <Contact1 client:load/>
+            <Contact2 client:load/>
+</Layout>

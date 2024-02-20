@@ -1,7 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+
+import Content1 from "@/components/templates/Content1";
+import Content2 from "@/components/templates/Content2";
+import Content3 from "@/components/templates/Content3";
 ---
-<Layout title="Píe de página">
+<Layout title="Contenido">
 
     <div class="p-10">
         <div class="flex">
@@ -11,5 +15,10 @@ import Layout from "@/layouts/Layout.astro";
             
         </div>
         </div>
+
+    <Content1 client:load/>
+    <Content2 client:load/>
+    <Content3 client:load/>
+
 
 </Layout>
