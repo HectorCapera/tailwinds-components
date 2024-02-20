@@ -1,131 +1,137 @@
 import React, { useState } from "react";
 import { Toaster, toast } from "sonner";
 
-const Contact1 = () => {
+const Contact3 = () => {
   const [activeButton, setActiveButton] = useState("diseño");
-  const [contact1, setContact1] = useState(""); // Variable para almacenar el código HTML
+  const [contact3, setContact3] = useState(""); // Variable para almacenar el código HTML
 
   const handleButtonClick = (button) => {
     setActiveButton(button);
 
     // Actualizar el código cuando haces clic en el botón "Código"
     if (button === "código") {
-      setContact1(`
-      <section class="text-slate-800 body-font bg-stone-100">
-            <div class="container px-5 py-24 mx-auto">
-              <div class="flex flex-col text-center w-full mb-20">
-                <h2 class="text-xs text-blue-500 tracking-widest font-medium title-font mb-1">
-                  Lorem ipsum dolor sit amet
-                </h2>
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4">
-                  Amet consectetur adipisicing elit.
-                </h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad
-                  provident excepturi cum incidunt, tempore voluptatum odit
-                  velit! Qui est temporibus atque earum ad praesentium iste
-                  perferendis! Quis cum reiciendis vel.
-                </p>
+      setContact3(`
+      <section class="text-gray-600 body-font relative bg-stone-100 rounded-lg">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+            Contacto
+          </h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </p>
+        </div>
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+          <div class="flex flex-wrap -m-2">
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="name" class="leading-7 text-sm text-gray-600">
+                  Nombre
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
               </div>
-              <div class="flex flex-wrap">
-                <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-700 border-opacity-60">
-                  <h2 class="text-lg sm:text-xl text-gray-800 font-medium title-font mb-2">
-                    Id quasi veritatis
-                  </h2>
-                  <p class="leading-relaxed text-base mb-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Quam beatae, velit ducimus.
-                  </p>
-                  <a class="text-blue-500  inline-flex items-center">
-                    Learn More
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      class="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
-                <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-700 border-opacity-60">
-                  <h2 class="text-lg sm:text-xl text-gray-800 font-medium title-font mb-2">
-                    The Catalyzer
-                  </h2>
-                  <p class="leading-relaxed text-base mb-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Quam beatae, velit ducimus.
-                  </p>
-                  <a class="text-blue-500  inline-flex items-center">
-                    Learn More
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      class="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
-                <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-700 border-opacity-60">
-                  <h2 class="text-lg sm:text-xl text-gray-800 font-medium title-font mb-2">
-                    Neptune
-                  </h2>
-                  <p class="leading-relaxed text-base mb-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Quam beatae, velit ducimus.
-                  </p>
-                  <a class="text-blue-500 inline-flex items-center">
-                    Learn More
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      class="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
-                <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-700 border-opacity-60">
-                  <h2 class="text-lg sm:text-xl text-gray-800 font-medium title-font mb-2">
-                    Melanchole
-                  </h2>
-                  <p class="leading-relaxed text-base mb-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Quam beatae, velit ducimus.
-                  </p>
-                  <a class="text-blue-500  inline-flex items-center">
-                    Learn More
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      class="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label
+                  for="email"
+                  class="leading-7 text-sm text-gray-600"
+                >
+                  E-mail
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
               </div>
-              <button class="flex mx-auto mt-16 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-700 rounded text-lg">
-                Button
+            </div>
+            <div class="p-2 w-full">
+              <div class="relative">
+                <label
+                  for="message"
+                  class="leading-7 text-sm text-gray-600"
+                >
+                  Mensaje
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                ></textarea>
+              </div>
+            </div>
+            <div class="p-2 w-full">
+              <button class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+                Botón
               </button>
             </div>
-          </section>
+            <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+              <a class="text-blue-500">example@email.com</a>
+              <p class="leading-normal my-5">
+                Dirección
+                <br />
+                Número de dirección
+              </p>
+              <span class="inline-flex">
+                <a class="text-gray-500">
+                  <svg
+                    fill="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+
+                <a class="ml-4 text-gray-500">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      width="20"
+                      height="20"
+                      x="2"
+                      y="2"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                  </svg>
+                </a>
+                <a class="ml-4 text-gray-500">
+                  <svg
+                    fill="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
       `);
     }
   };
@@ -133,7 +139,7 @@ const Contact1 = () => {
   const handleCopyToClipboard = () => {
     // Crear un elemento textarea para copiar el código
     navigator.clipboard
-      .writeText(contact1)
+      .writeText(contact3)
       .then(() => {
         toast.success("Código copiado al portapapeles", {
           duration: 3000,
@@ -148,7 +154,7 @@ const Contact1 = () => {
 
   return (
     <div className="p-10 bg-zinc-800/70 rounded-lg">
-      <h2 className="text-3xl mt-4">Píe de página</h2>
+      <h2 className="text-3xl mt-4">Contacto</h2>
       <div className="flex gap-5 mb-10">
         <button onClick={() => handleButtonClick("diseño")}>Diseño</button>
         <button onClick={() => handleButtonClick("código")}>Código</button>
@@ -157,54 +163,124 @@ const Contact1 = () => {
 
       {activeButton === "diseño" && (
         <div>
-          <section class="text-gray-600 body-font relative">
-            <div class="absolute inset-0 bg-gray-300">
-              <iframe
-                width="100%"
-                height="100%"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0"
-                title="map"
-                scrolling="no"
-                src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=Bogotá+(Nombre%20de%20mi%20Negocio)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-              ></iframe>
-            </div>
-            <div class="container px-5 py-24 mx-auto flex">
-              <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
-                <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
+          <section class="text-gray-600 body-font relative bg-stone-100 rounded-lg">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
                   Contacto
-                </h2>
-                <p class="leading-relaxed mb-5 text-gray-600">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 </p>
-                <div class="relative mb-4">
-                  <label for="email" class="leading-7 text-sm text-gray-600">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
+              </div>
+              <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                <div class="flex flex-wrap -m-2">
+                  <div class="p-2 w-1/2">
+                    <div class="relative">
+                      <label for="name" class="leading-7 text-sm text-gray-600">
+                        Nombre
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                      />
+                    </div>
+                  </div>
+                  <div class="p-2 w-1/2">
+                    <div class="relative">
+                      <label
+                        for="email"
+                        class="leading-7 text-sm text-gray-600"
+                      >
+                        E-mail
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                      />
+                    </div>
+                  </div>
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <label
+                        for="message"
+                        class="leading-7 text-sm text-gray-600"
+                      >
+                        Mensaje
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="p-2 w-full">
+                    <button class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+                      Botón
+                    </button>
+                  </div>
+                  <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                    <a class="text-blue-500">example@email.com</a>
+                    <p class="leading-normal my-5">
+                      Dirección
+                      <br />
+                      Número de dirección
+                    </p>
+                    <span class="inline-flex">
+                      <a class="text-gray-500">
+                        <svg
+                          fill="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          class="w-5 h-5"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                      </a>
+
+                      <a class="ml-4 text-gray-500">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          class="w-5 h-5"
+                          viewBox="0 0 24 24"
+                        >
+                          <rect
+                            width="20"
+                            height="20"
+                            x="2"
+                            y="2"
+                            rx="5"
+                            ry="5"
+                          ></rect>
+                          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                      </a>
+                      <a class="ml-4 text-gray-500">
+                        <svg
+                          fill="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          class="w-5 h-5"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        </svg>
+                      </a>
+                    </span>
+                  </div>
                 </div>
-                <div class="relative mb-4">
-                  <label for="message" class="leading-7 text-sm text-gray-600">
-                    Mensaje
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                  ></textarea>
-                </div>
-                <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                  Botón
-                </button>
-                <p class="text-xs text-gray-500 mt-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
               </div>
             </div>
           </section>
@@ -215,7 +291,7 @@ const Contact1 = () => {
         <div>
           {/* Renderizar el código HTML almacenado en la variable 'codigo' */}
           <pre>
-            <code>{contact1}</code>
+            <code>{contact3}</code>
           </pre>
         </div>
       )}
@@ -224,4 +300,4 @@ const Contact1 = () => {
   );
 };
 
-export default Contact1;
+export default Contact3;

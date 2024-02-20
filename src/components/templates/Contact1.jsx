@@ -148,7 +148,7 @@ const Contact1 = () => {
 
   return (
     <div className="p-10 bg-zinc-800/70 rounded-lg">
-      <h2 className="text-3xl mt-4">Píe de página</h2>
+      <h2 className="text-3xl mt-4">Contacto</h2>
       <div className="flex gap-5 mb-10">
         <button onClick={() => handleButtonClick("diseño")}>Diseño</button>
         <button onClick={() => handleButtonClick("código")}>Código</button>
@@ -186,7 +186,7 @@ const Contact1 = () => {
                     type="email"
                     id="email"
                     name="email"
-                    class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
                 <div class="relative mb-4">
@@ -196,10 +196,10 @@ const Contact1 = () => {
                   <textarea
                     id="message"
                     name="message"
-                    class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   ></textarea>
                 </div>
-                <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                <button class="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">
                   Botón
                 </button>
                 <p class="text-xs text-gray-500 mt-3">

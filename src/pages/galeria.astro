@@ -1,0 +1,24 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import Gallery1 from "@/components/templates/Gallery1"
+import Gallery2 from "@/components/templates/Gallery2"
+import Gallery3 from "@/components/templates/Gallery3"
+---
+
+<Layout title="Contacto">
+
+    <div class="p-10">
+        <div class="flex">
+            <a href="/"> Inicio </a> 
+            <p>&nbsp; / &nbsp;</p>
+            <p>Contacto</p>
+            
+        </div>
+        </div>
+
+    <Gallery1 client:load />
+    <Gallery2 client:load />
+    <Gallery3 client:load />
+
+</Layout>

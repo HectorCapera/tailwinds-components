@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import Team1 from "@/components/templates/Team1"
+import Team2 from "@/components/templates/Team2"
+
+---
+
+<Layout title="Equipo">
+
+    <div class="p-10">
+        <div class="flex">
+            <a href="/"> Inicio </a> 
+            <p>&nbsp; / &nbsp;</p>
+            <p>Contacto</p>
+            
+        </div>
+        </div>
+
+    <Team1 client:load/>
+    <Team2 client:load/>
+
+</Layout>
