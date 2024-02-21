@@ -1,0 +1,27 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+
+import Testimonial1 from "@/components/templates/Testimonial1";
+import Testimonial2 from "@/components/templates/Testimonial2";
+import Testimonial3 from "@/components/templates/Testimonial3";
+
+
+---
+
+<Layout title="Testimonios">
+
+    <div class="p-10">
+        <div class="flex">
+            <a href="/"> Inicio </a> 
+            <p>&nbsp; / &nbsp;</p>
+            <p>Contacto</p>
+            
+        </div>
+        </div>
+
+    <Testimonial1 client:load/>
+    <Testimonial2 client:load/>
+    <Testimonial3 client:load/>
+
+</Layout>
