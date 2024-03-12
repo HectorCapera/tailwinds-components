@@ -1,6 +1,6 @@
 const ContentPage = () => {
   return (
-    <section class="grid grid-cols-1 gap-20 px-4 py-10 mx-auto max-w-7xl lg:px-16 xl:px-24 md:grid-cols-2 lg:grid-cols-4">
+    <section class="grid grid-cols-2 gap-20 px-4 py-10 mx-auto max-w-7xl lg:px-16 xl:px-24 md:grid-cols-2 lg:grid-cols-4">
       <div class="flex flex-col items-center">
         <picture>
           <img
